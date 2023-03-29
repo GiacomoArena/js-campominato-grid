@@ -49,3 +49,4 @@ function createSquare() {
  andremo a rimuovere o inserire la classe clicked che al momento cambia il background dello square 
    
 - creare la variabile "squareId" che sará =  "randomNum" per poi nel eventlistener essere visualizzato con un log tramite un click.
+- creare un button che ha una posizione centrale e dare una classe "hide" al container per poterlo nascondere cosí che  tramite un addeventlistener al click venga rimossa la classe hide al container e inserita invece al button.
