@@ -9,6 +9,10 @@ body{
   background-color: rgba(51, 20, 107, 0.685);
 }
 
+.hide{
+  display: none;
+}
+
 .main-wrapper{
   height: 100vh;
   display: flex;
@@ -27,8 +31,15 @@ body{
 }
 
 .square{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: calc(100% / 10);
   aspect-ratio: 1/1;
-  background-color: rgba(17, 104, 107, 0.747);
   border: 2px solid rgb(248, 228, 228);
+  cursor: pointer;
+}
+
+.clicked{
+  background-color: rgba(17, 104, 107, 0.747);
 }

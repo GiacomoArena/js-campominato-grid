@@ -27,3 +27,25 @@ function createSquare() {
 }
  ```
  .
+ - creare una funzione per la produzione di numeri casuali da 1 a 100 sempre differenti che poi assegneremo come valore a square
+ ``` 
+ function uinqueRandomNum(generatedNumbers, max, min) {
+  let randomNumber = Math.floor(Math.random() * (max - min +1)+min);
+
+  while (generatedNumbers.includes(randomNumber)) {
+    randomNumber = Math.floor(Math.random() * (max - min +1)+min);
+  }
+  generatedNumbers.push(randomNumber);
+
+  return randomNumber;
+}
+ ```
+ .
+ - creare un addeventlistener che al click tramite
+ ```
+ this.classList.toggle('clicked');
+ ```
+ .
+ andremo a rimuovere o inserire la classe clicked che al momento cambia il background dello square 
+   
+- creare la variabile "squareId" che sará =  "randomNum" per poi nel eventlistener essere visualizzato con un log tramite un click.
