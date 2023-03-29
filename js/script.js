@@ -8,15 +8,19 @@ for (let i = 0; i < 100; i++) {
   const square = createSquare();
 
   let randomNum = uinqueRandomNum(generatedNumbers, 100, 1);
-  console.log(square);
   container.appendChild(square);
   let squareId = randomNum;
-  console.log(square.squareId);
 
   square.addEventListener('click', function(){
     this.classList.toggle('clicked');
+    console.info("hai clicacto il N° " + squareId);
     square.append(randomNum);
-    console.log(squareId);
+    if(square.classList.contains('clicked')){
+      console.log(square);
+    }
+    else{
+      square.removeChild(randomNum)
+    }
     /*DA FIXARE perché il tasto non appena viene clicacto per la seconda vlta torna viola ma con il doppio del tersto su */
   })
 }
