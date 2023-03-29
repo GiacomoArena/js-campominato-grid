@@ -4,23 +4,20 @@ const container = document.querySelector('.container')
 let generatedNumbers = [];
 
 for (let i = 0; i < 100; i++) {
-
   const square = createSquare();
-
   let randomNum = uinqueRandomNum(generatedNumbers, 100, 1);
+  let spanNumber = document.createElement('span');
+  spanNumber.append(randomNum)
   container.appendChild(square);
   let squareId = randomNum;
 
   square.addEventListener('click', function(){
     this.classList.toggle('clicked');
     console.info("hai clicacto il N° " + squareId);
-    square.append(randomNum);
-    if(square.classList.contains('clicked')){
-      console.log(square);
-    }
-    else{
-      square.removeChild(randomNum)
-    }
+    square.append(spanNumber);
+    if(!square.classList.contains('clicked')){
+      square.removeChild(spanNumber)    }
+    
     /*DA FIXARE perché il tasto non appena viene clicacto per la seconda vlta torna viola ma con il doppio del tersto su */
   })
 }
