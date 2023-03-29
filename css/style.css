@@ -8,8 +8,13 @@ body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: rgba(51, 20, 107, 0.685);
 }
-
+.visible{
+  opacity: 1;
+}
 .hide{
+  opacity: 0;
+}
+.none{
   display: none;
 }
 
@@ -42,4 +47,20 @@ body{
 
 .clicked{
   background-color: rgba(17, 104, 107, 0.747);
+}
+.start-button{
+  position: relative;
+}
+button{
+  border-radius: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  position: absolute;
+  width:200px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  cursor: pointer;
 }

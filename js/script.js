@@ -2,6 +2,18 @@
 const mainWrapper = document.querySelector('.main-wrapper')
 const container = document.querySelector('.container')
 let generatedNumbers = [];
+const startButton = document.querySelector('button')
+
+container.classList.add('hide')
+
+startButton.addEventListener('click', function(){
+  
+  if(container.classList.contains('hide')) {
+    container.classList.remove('hide')
+    startButton.classList.add('none')
+  }
+})
+
 
 for (let i = 0; i < 100; i++) {
   const square = createSquare();
@@ -16,9 +28,9 @@ for (let i = 0; i < 100; i++) {
     console.info("hai clicacto il N° " + squareId);
     square.append(spanNumber);
     if(!square.classList.contains('clicked')){
-      square.removeChild(spanNumber)    }
+      square.removeChild(spanNumber)
+    }
     
-    /*DA FIXARE perché il tasto non appena viene clicacto per la seconda vlta torna viola ma con il doppio del tersto su */
   })
 }
 
